@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+body {
+  font-family: $font-quicksand;
+  font-size: 18px;
+  overflow-x: hidden;
+  background: linear-gradient(
+    180deg,
+    // rgba(225, 211, 58, 0.3) 0%,
+    // rgba(8, 203, 44, 0.3) 100%
+    #ffea014d 0%,
+    #fffdfcae 100%
+  );
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+img,
+video {
+  width: 100%;
+}
+
+.heading-block {
+  .title {
+    font-size: 60px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+  .desc {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 25px;
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+}
+
+#header {
+  margin-top: 20px;
+  .header-wrapper {
+    @include flex(center, center, 20px);
+  }
+  .link {
+    text-transform: capitalize;
+  }
+}
+
+#banner {
+  margin-top: 100px;
+  .heading-block {
+    .title {
+      font-size: 100px;
+      background: linear-gradient(180deg, #e0ce054d 0%, #08cb2c4d 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-weight: 900;
+      @include mobile {
+        font-size: 60px;
+      }
+    }
+  }
+  .banner-image {
+    margin: 50px auto 0;
+    max-width: unset;
+  }
+}
+
+#about {
+  margin-top: 100px;
+
+  .about-wrapper {
+    margin-top: 50px;
+    @include flex(space-between, center, 30px);
+    @include landscape-phone {
+      flex-direction: column-reverse;
+    }
+  }
+  .about-content {
+    max-width: 500px;
+    p {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 35px;
+    }
+  }
+  .about-iamge {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+#tokenomics {
+  margin-top: 100px;
+  .tokenomics-total {
+    margin-top: 80px;
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #f639044d 0%, #09b6f54d 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+
+  .tokenomics-wrapper {
+    @include flex(center, center, 30px);
+    margin-top: 50px;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  .chart {
+    max-width: 300px;
+    width: 100%;
+  }
+  .list {
+    .item {
+      @include flex(unset, center, 20px);
+      margin-bottom: 15px;
+      .color {
+        background-color: var(--col);
+        border-radius: 500px;
+        width: 40px;
+        aspect-ratio: 1;
+      }
+      .text {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+#footer {
+  margin-top: 100px;
+  padding: 25px 0;
+  background: linear-gradient(180deg, #e07a054d 0%, #044afc4d 100%);
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+  }
+}
